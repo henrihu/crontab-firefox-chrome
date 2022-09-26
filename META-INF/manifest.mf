@@ -1,0 +1,74 @@
+Manifest-Version: 1.0
+
+Name: background.js
+Digest-Algorithms: MD5 SHA1 SHA256
+MD5-Digest: Iqi7GQDwzJ7AoUjCNAH1ow==
+SHA1-Digest: LiapOPvZVUSRAlFLF8CezmEfVPc=
+SHA256-Digest: 9ineBbT0/Iiote24MggFdBW1/02p8XlqKZOozIhkCds=
+
+Name: cron.js
+Digest-Algorithms: MD5 SHA1 SHA256
+MD5-Digest: 8Hd8sSBA89HXbrDLt3IdAA==
+SHA1-Digest: TZ81rD0IHX61lQvHbB4uS6IJD64=
+SHA256-Digest: xEFW0sZuPngY9w6yyh4q4pFTBfUTPpBDIouZnh75U84=
+
+Name: manifest.json
+Digest-Algorithms: MD5 SHA1 SHA256
+MD5-Digest: R4WVE/9hO/lmjWlKtUuflQ==
+SHA1-Digest: WHrhC9IpE6mCVGtnph2aMhR1yUI=
+SHA256-Digest: 1qN7FCJ9trnoPFgf02MHQ4Jy3CRq1GWpUURBkrl9j0E=
+
+Name: options.css
+Digest-Algorithms: MD5 SHA1 SHA256
+MD5-Digest: PZLF9cOckOcoWqx6qDlQoQ==
+SHA1-Digest: nkiI6VkKvrmlPE2LIO1AjoHdyc4=
+SHA256-Digest: N8a9/kX4JA4Z8wVkpGUnlAdepKreFPKDuqhXe2v2dno=
+
+Name: options.html
+Digest-Algorithms: MD5 SHA1 SHA256
+MD5-Digest: 8auQumsak6MVyhOoqi14Tg==
+SHA1-Digest: 56OdfafSP4qJZFDVXAW5N/Uoz4w=
+SHA256-Digest: DVA1+viMITmiu9aF8hDL7QiVavZFhBRV95rIMdi2l58=
+
+Name: options.js
+Digest-Algorithms: MD5 SHA1 SHA256
+MD5-Digest: lKz6IK2O1UuWIaeKjNLSHw==
+SHA1-Digest: +jBm92Nan1BthJY2q6GGnpZn/uk=
+SHA256-Digest: Kb7g7irqTBawNAMWwZWuExV0kFzFdlbTdzu+lYb5Lp8=
+
+Name: util.js
+Digest-Algorithms: MD5 SHA1 SHA256
+MD5-Digest: jQyojmDAotf0lRxc6H8ftA==
+SHA1-Digest: Nd3fOXhf17n6493PTZ4LD0lUxMM=
+SHA256-Digest: blL8oow4GTXuMVzQN0Dh1hCHI6tcPJsjH24sfmAdc70=
+
+Name: icons/cronTab-16.png
+Digest-Algorithms: MD5 SHA1 SHA256
+MD5-Digest: 3RYIXT7ZirkegwRoWKBlvQ==
+SHA1-Digest: wdL4ajp8Y9ePmdeyHJnSpwfc7VY=
+SHA256-Digest: +3FHZi9UHH9ulWqSVnO4JlubUtRKxbp92tnqnpylReg=
+
+Name: icons/cronTab-192.png
+Digest-Algorithms: MD5 SHA1 SHA256
+MD5-Digest: S0AAQghj0fJWnce1FOTHMg==
+SHA1-Digest: iPi6Ub0qGv8lhZpB5ZTh+kb0xgc=
+SHA256-Digest: b9jtt2wLtqsWhrY9bla6HVboujMxomCJtoWJLqGiWLA=
+
+Name: icons/cronTab-32.png
+Digest-Algorithms: MD5 SHA1 SHA256
+MD5-Digest: ofQ/im7OCanbkgNPuuZhoA==
+SHA1-Digest: tAtCS2TkACks5YlPLO1kO5mM6wM=
+SHA256-Digest: tgMIeIp7E9vCCXq9TZ3QKiT60zb/11BGq6VOpwU7IU4=
+
+Name: icons/cronTab-48.png
+Digest-Algorithms: MD5 SHA1 SHA256
+MD5-Digest: wYIvECioT19cT/McOvfFHw==
+SHA1-Digest: m6z8vvQs1jYr9mXE9bP+B89QXiQ=
+SHA256-Digest: aMvRdTy5nZCG4NIYvaLpJXmmdeWaCGEDbV+UzWtLXpw=
+
+Name: icons/cronTab-96.png
+Digest-Algorithms: MD5 SHA1 SHA256
+MD5-Digest: VldX1SQ59lBFZqMi/4KxsA==
+SHA1-Digest: F1rOYB8NqbbH2ROXvqtF10P59+U=
+SHA256-Digest: eF3LbhNlwZZf7fwf1fumZOJ4pO351py3mWAo98ijy88=
+

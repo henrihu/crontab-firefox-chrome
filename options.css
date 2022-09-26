@@ -1,0 +1,17 @@
+table {
+  width: 320px;
+  table-layout: fixed;
+}
+th, td {
+  text-align: left;
+}
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  display: block; 
+}
+textarea {
+  height: 120px;
+  resize: vertical;
+  white-space: pre;
+}
