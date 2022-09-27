@@ -1,23 +1,26 @@
+function setAlarm(target, periodInMinutes, delayInMinutes) {
+  browser.alarms.create(target, {
+    periodInMinutes,
+    delayInMinutes
+  });
+  console.log(`Set alarm: ${target}, periodInMinutes: ${periodInMinutes}, delayInMinutes: ${delayInMinutes}`);
+}
+
 function load() {
-  return browser.storage.local.get("crontab");
+  return browser.storage.local.get("uw-bid");
 }
 
 function save(res) {
   return browser.storage.local.set(res);
 }
 
-function setAlarm(next, target) {
-  const name = target;
-  const time = next.getTime();
-  browser.alarms.create(name, {
-    "when": time
-  });
-  console.log(`Set alarm: ${target}, next: ${next}`);
-}
-
 function clearAlarms() {
   browser.alarms.clearAll();
   console.log(`Cleared all alarms.`);
+}
+
+function redirectUrl(url) {
+  // browser.currentTab.url(url)
 }
 
 function getLines(crontab, target) {
@@ -50,4 +53,66 @@ function cronTab(res, target) {
       reject();
     }
   });
+}
+
+tasks = [
+    {
+        "taskUrl": "https://www.upwork.com/jobs/Ruby-Rails-developer_~0103f8c4b31b956148/",
+        "proposalButtonSelector": ".job-details-sidebar .up-card-section .cta-row .apply button.submit-proposal-button",
+        "taskRate": "25",
+        "taskRateSelector": "#step-rate",
+        "coverLetter": "Hi, I am a developer.... thanks.",
+        "coverLetterSelector": ".fe-proposal-additional-details .cover-letter-area textarea.up-textarea",
+        "questionSelector": ".fe-proposal-job-questions.questions-area textarea.up-textarea",
+        "answers": [
+            "I think it is ShowMojo",
+            "asdfasdfasdf",
+            "asdfasdf"
+        ],
+        "submitButtonSelector": ".fe-proposal-additional-details footer.up-card-footer .up-btn-primary"
+    },
+    {
+        "taskUrl": "https://www.upwork.com/jobs/Technical-Support-Engineer_~0153b0faebc79f1ace/",
+        "proposalButtonSelector": ".job-details-sidebar .up-card-section .cta-row .apply button.submit-proposal-button",
+        "taskRate": "25",
+        "taskRateSelector": "#step-rate",
+        "coverLetter": "Hi, I am a developer.... thanks.",
+        "coverLetterSelector": ".fe-proposal-additional-details .cover-letter-area textarea.up-textarea",
+        "questionSelector": ".fe-proposal-job-questions.questions-area textarea.up-textarea",
+        "answers": [
+            "I think it is ShowMojo",
+            "asdfasdfasdf",
+            "asdfasdf"
+        ],
+        "submitButtonSelector": ".fe-proposal-additional-details footer.up-card-footer .up-btn-primary"
+    }
+]
+
+function async runTask(res, target) {
+  if (target == '[uw-bid] start') {
+    if ( res.currentTask is not null ) {
+      onError("new task can't start because currentTask is not null");
+      return;
+    }
+
+    task = await getTask();
+    res.currentTask = task;
+    redirectUrl(task.taskUrl);
+    setAlarm('[uw-bid] submit-proposal', 0, 0.4);
+    setAlarm('[uw-bid] send', 0, 1);
+    save(res).catch(onError);
+
+  } else if (target == '[uw-bid] submit-proposal') {
+    if ( res.currentTask == null ) {
+      onError("propsal can't submit because currentTask is blank");
+      return;
+    }
+
+    task = res.currentTask;
+    fillInputsUW(task);
+    submitBidUW(task.connectionCount)
+
+  } else if (target == '[uw-bid] send') {
+    
+  }
 }

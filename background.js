@@ -8,10 +8,9 @@ function onError(error) {
   console.log(error);
 }
 
-browser.alarms.onAlarm.addListener((alarm) => {
+browser.alarms.onAlarm.addListener(async (alarm) => {
   const target = alarm.name;
-  show(target);
-  load().then((res) => cronTab(res, target)).catch(onError);
+  load().then((res) => runTask(res, target)).catch(onError);
 });
 
-load().then(cronTab).catch(onError);
+setAlarm('[uw-bid] start');
