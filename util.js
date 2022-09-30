@@ -20,7 +20,7 @@ function clearAlarms() {
 }
 
 function redirectUrl(url) {
-  // browser.currentTab.url(url)
+  window.location.href = url;
 }
 
 function getLines(crontab, target) {
@@ -58,9 +58,9 @@ function cronTab(res, target) {
 tasks = [
     {
         "taskUrl": "https://www.upwork.com/jobs/Ruby-Rails-developer_~0103f8c4b31b956148/",
-        "proposalButtonSelector": ".job-details-sidebar .up-card-section .cta-row .apply button.submit-proposal-button",
-        "taskRate": "25",
-        "taskRateSelector": "#step-rate",
+        "jobType": "Hourly",
+        "hourlyRateSelector": "input#step-rate",
+        "hourlyRate": "25",
         "coverLetter": "Hi, I am a developer.... thanks.",
         "coverLetterSelector": ".fe-proposal-additional-details .cover-letter-area textarea.up-textarea",
         "questionSelector": ".fe-proposal-job-questions.questions-area textarea.up-textarea",
@@ -69,7 +69,7 @@ tasks = [
             "asdfasdfasdf",
             "asdfasdf"
         ],
-        "submitButtonSelector": ".fe-proposal-additional-details footer.up-card-footer .up-btn-primary"
+        "submitButtonSelector": "div.fe-job-apply button.up-btn-primary"
     },
     {
         "taskUrl": "https://www.upwork.com/jobs/Technical-Support-Engineer_~0153b0faebc79f1ace/",
@@ -90,6 +90,7 @@ tasks = [
 
 function async runTask(res, target) {
   if (target == '[uw-bid] start') {
+    console.log("'[uw-bid] start' is run")
     if ( res.currentTask is not null ) {
       onError("new task can't start because currentTask is not null");
       return;
@@ -103,6 +104,7 @@ function async runTask(res, target) {
     save(res).catch(onError);
 
   } else if (target == '[uw-bid] submit-proposal') {
+    console.log("'[uw-bid] submit-proposal' is run")
     if ( res.currentTask == null ) {
       onError("propsal can't submit because currentTask is blank");
       return;
@@ -113,6 +115,6 @@ function async runTask(res, target) {
     submitBidUW(task.connectionCount)
 
   } else if (target == '[uw-bid] send') {
-    
+    console.log("'[uw-bid] send' is run")
   }
 }
